@@ -6,7 +6,7 @@
 
 
 
-SCRIPTS_DIR = pathlib.Path(__file__).parent.resolve()
+SCRIPTS_DIR = pathlib.Path(__file__).parent.reso
 NEW_ARTIFACTS_DIR = SCRIPTS_DIR / "test_resources" / "new_artifacts_dir"
 CURRENT_ARTIFACTS_DIR = SCRIPTS_DIR / "test_resources" / "current_artifacts_dir"
 TEMP_DIR = SCRIPTS_DIR / "test_resources" / "temp"
