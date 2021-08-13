@@ -12,12 +12,7 @@ CURRENT_ARTIFACTS_DIR = SCRIPTS_DIR / "test_resources" / "current_artifacts_dir"
 TEMP_DIR = SCRIPTS_DIR / "test_resources" / "temp"
 
 
-class TestChangeSummary(unittest.TestCase):
-    def setUp(self):
-        # Clear temporary directory
-        shutil.rmtree(TEMP_DIR, ignore_errors=True)
-        # Create temporary directory
-        pathlib.Path(TEMP_DIR).mkdir()
+
 
         self.cs = ChangeSummary(NEW_ARTIFACTS_DIR, CURRENT_ARTIFACTS_DIR, TEMP_DIR, [])
 
