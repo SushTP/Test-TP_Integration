@@ -5,15 +5,6 @@
 # You may obta
 """ChangeSummary tests."""
 
-__author__ = "partheniou@google.com (Anthonios Partheniou)"
-
-
-
-import pandas as pd
-
-from changesummary import ChangeSummary
-from changesummary import ChangeType
-from changesummary import DirectoryDoesNotExist
 
 SCRIPTS_DIR = pathlib.Path(__file__).parent.resolve()
 NEW_ARTIFACTS_DIR = SCRIPTS_DIR / "test_resources" / "new_artifacts_dir"
