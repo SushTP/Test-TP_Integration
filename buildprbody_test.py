@@ -1,5 +1,4 @@
-# Copyright 2021 Google LLC
-#
+
 
 
 __author__ = "partheniou@google.com (Anthonios Partheniou)"
