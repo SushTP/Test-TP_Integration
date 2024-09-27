@@ -3,30 +3,11 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obta
-"""ChangeSummary tests."""
-
-__author__ = "partheniou@google.com (Anthonios Partheniou)"
 
 
 
-import pandas as pd
-
-from changesummary import ChangeSummary
-from changesummary import ChangeType
-from changesummary import DirectoryDoesNotExist
-
-SCRIPTS_DIR = pathlib.Path(__file__).parent.resolve()
-NEW_ARTIFACTS_DIR = SCRIPTS_DIR / "test_resources" / "new_artifacts_dir"
-CURRENT_ARTIFACTS_DIR = SCRIPTS_DIR / "test_resources" / "current_artifacts_dir"
-TEMP_DIR = SCRIPTS_DIR / "test_resources" / "temp"
 
 
-class TestChangeSummary(unittest.TestCase):
-    def setUp(self):
-        # Clear temporary directory
-        shutil.rmtree(TEMP_DIR, ignore_errors=True)
-        # Create temporary directory
-        pathlib.Path(TEMP_DIR).mkdir()
 
         self.cs = ChangeSummary(NEW_ARTIFACTS_DIR, CURRENT_ARTIFACTS_DIR, TEMP_DIR, [])
 
