@@ -2,16 +2,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
+# You may obta
 """ChangeSummary tests."""
 
 __author__ = "partheniou@google.com (Anthonios Partheniou)"
@@ -83,17 +74,7 @@ class TestChangeSummary(unittest.TestCase):
         self.assertEqual(df["name"].iloc[0], "drive")
         self.assertEqual(df["version"].iloc[0], "v3")
 
-    def test_get_discovery_differences_for_new_doc_returns_expected_dataframe(self):
-        df = self.cs._get_discovery_differences("drive.v3.json")
-        # Assume that `drive.v3.json` is a new discovery artifact that doesn't
-        # exist in `CURRENT_ARTIFACTS_DIR`.
-        self.assertEqual(df["Name"].iloc[0], "drive")
-        self.assertEqual(df["Version"].iloc[0], "v3")
-
-        # All rows in the dataframe should  have `True` in the `Added` column
-        # and `False` in the `Deleted` column.
-        # pd.Dataframe().all() will return `True` if all elements are `True`.
-        self.assertTrue(df["Added"].all())
+   ed"].all())
         self.assertTrue((~df["Deleted"]).all())
 
         # There should be 4 unique key differences
